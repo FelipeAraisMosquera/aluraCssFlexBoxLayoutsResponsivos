@@ -1,0 +1,24 @@
+.cabecera__container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+}
+
+.cabecera__buscar__item{
+    display: none;
+}
+
+.rodapie__container{
+    display:flex; 
+    flex-direction: column;
+}
+
+@media (min-width:834px){ /*despues de un ancho de 834px se quita el buscador*/
+
+    .cabecera__buscar__item{
+        display: block;
+    }
+
+}
