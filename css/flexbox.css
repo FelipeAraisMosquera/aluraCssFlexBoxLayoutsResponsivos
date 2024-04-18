@@ -10,9 +10,19 @@
     display: none;
 }
 
+.superior__seccion__container{
+    display: flex;
+    align-items: center;
+    white-space: nowrap;/*para que ek texto sea en una sola linea  */
+    overflow: scroll;/*barra de deslizamiento*/
+    gap: 15px/*espacio entre cada uno de los elementos*/
+}
+
 .rodapie__container{
     display:flex; 
-    flex-direction: column;
+   /* flex-direction: column;
+    flex-wrap: wrap;*/
+    flex-flow: column wrap;/* se simplifica el codigo comentado*/
 }
 
 @media (min-width:834px){ /*despues de un ancho de 834px se quita el buscador*/
@@ -20,5 +30,7 @@
     .cabecera__buscar__item{
         display: block;
     }
-
+    .rodapie__container{
+        justify-content: space-between;
+    }
 }
