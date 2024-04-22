@@ -1,3 +1,5 @@
+/*https://css-tricks.com/snippets/css/a-guide-to-flexbox/*/
+
 .cabecera__container{
     display: flex;
     justify-content: space-between;
@@ -10,6 +12,36 @@
     display: none;
 }
 
+.menu__container{/*Se pone el menu abajo*/
+    position: fixed;
+    bottom: 0%;
+    height: 75px;
+    width: 100%;
+}
+
+.menu__lista{
+    display: flex;
+    justify-content: space-around;
+    height: 100%;
+}
+
+.menu__lista li{
+    align-self: center;
+}
+
+.menu__itens{
+    display: flex;
+    flex-direction: column;
+    gap: 5px
+}
+
+.menu__lista:nth-child(2),/*Se oculta alguna informacion del menu*/
+.menu__lista:nth-child(3),
+.menu__lista:nth-child(4){
+    display: none; 
+}
+
+
 .superior__seccion__container{
     display: flex;
     align-items: center;
@@ -20,17 +52,53 @@
 
 .rodapie__container{
     display:flex; 
-   /* flex-direction: column;
+    /* flex-direction: column;
     flex-wrap: wrap;*/
     flex-flow: column wrap;/* se simplifica el codigo comentado*/
 }
-
+/*#################################################*/
 @media (min-width:834px){ /*despues de un ancho de 834px se quita el buscador*/
 
     .cabecera__buscar__item{
-        display: block;
+            display: block;
     }
+    
+    .menu__container{
+        left: 0;
+        height: auto;
+        width: 74px;
+        top: 80px;
+    }
+
+    .menu__lista{
+        flex-direction: column;
+        justify-content: flex-start;
+        padding-top: 15px;
+        gap: 33px;
+    }
+
     .rodapie__container{
-        justify-content: space-between;
+            justify-content: space-between;
     }
 }
+
+@media (min-width:1440px){
+    .menu__container{
+        width: 239px;
+        overflow: scroll;
+
+    }
+
+    .menu__lista:nth-child(2),/*Se oculta alguna informacion del menu*/
+    .menu__lista:nth-child(3),
+    .menu__lista:nth-child(4){
+        display: flex; 
+    }
+
+    .menu__lista{
+        height: auto;
+        padding: 20px 17px  20px 15px;
+    }
+}
+
+
