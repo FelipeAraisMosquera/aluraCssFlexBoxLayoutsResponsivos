@@ -49,6 +49,19 @@
     overflow: scroll;/*barra de deslizamiento*/
     gap: 15px/*espacio entre cada uno de los elementos*/
 }
+/*Seccion de Videos*/
+.videos__item {
+    height: 303px;
+    width: 280px;
+    flex-grow: 1;
+}
+
+.videos__container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px
+}
+
 
 .rodapie__container{
     display:flex; 
@@ -98,7 +111,33 @@
     .menu__lista{
         height: auto;
         padding: 20px 17px  20px 15px;
+        gap: 15px;
+    }
+
+    .menu__itens{
+        flex-direction: row;
+        gap: 15px;
+        align-items: center;
     }
 }
+
+.menu__lista:nth-child(3){
+    flex-direction: column-reverse;
+}
+
+
+.videojuegos{
+    order: 3;
+}
+
+.peliculas{
+    order: 2;
+}
+
+.premium{
+    order: 1;
+}
+
+
 /*prueba git*/
 
